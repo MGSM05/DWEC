@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+
+    <style>
+        body 
+        { 
+            font-family: Arial, 
+            sans-serif; 
+            padding: 20px; 
+        }
+
+        #formContainer 
+        {
+            display: none;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Catálogo de Productos</h1>
+    <button id="btnAdd">Añadir producto</button><br><br>
+
+    <div id="formContainer">
+        <h3>Nuevo Producto</h3>
+
+        <form id="productoForm">
+            <label>ID:</label><br>
+            <input type="text"><br><br>
+
+            <label>Nombre:</label><br>
+            <input type="text"><br><br>
+
+            <label>Descripción:</label><br>
+            <input type="text"><br><br>
+
+            <label>Precio:</label><br>
+            <input type="text"><br><br>
+
+            <label>Imagen:</label><br>
+            <input type="file" accept="image/*"><br><br>
+
+            <button type="submit">Crear producto</button>
+        </form>
+    </div>
+
+    <script>
+        const btnAdd = document.getElementById("btnAdd");
+        const formContainer = document.getElementById("formContainer");
+
+        btnAdd.addEventListener("click", () => {
+            formContainer.style.display =
+                formContainer.style.display === "none" ? "block" : "none";
+        });
+    </script>
+
+</body>
+</html>
